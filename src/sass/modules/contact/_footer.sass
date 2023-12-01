@@ -41,20 +41,29 @@
             transition: ease-in-out 0.3s
         &:hover::after 
             width: 100%
-.section3
+.sec3-1
     background-image: url(../img/fun-bg.jpg)
     height: 40vh
-    .section3-blue
+    width: 100%
+    .section3-b
         background-color: #1a76d1
         height: 40vh
         opacity: 70%
+        width: 100%
+        background-repeat: no-repeat
+.sec3-child2
+    display: flex
+    align-items: center
+    justify-content: center
+    // height: 100vh
 .section3-child1
     i
         z-index: 11
 .sec2-1 
     width: 80vw !important
     height: 62vh !important
-    box-shadow: 2% 2% 2% 
+    border: gray 2px solid
+    box-shadow: 10% 10% 10% 10%
 .footer-child1
     width: 20vw
     p
@@ -63,3 +72,38 @@
         span
             border-bottom: 3px white solid
             width: 5vw
+    .lft
+        height: fit-content
+        justify-content: center
+        align-items: center
+    
+@media ( max-width: 426px)
+    .sec2-1
+        height: 100vh !important
+        width: 60vh!important
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: start
+        padding: 3vw  !important
+    .sec3-child2
+        display: flex
+        
+    .map 
+        height: 30vh !important
+        width: 60vw !important
+    .rigt
+        width: 100%
+    .lft
+        input
+            width: 80vw !important
+        textarea
+            width: 80vw !important
+            height: 20vh !important
+        button
+            width: 75vw !important
+            height: 5vh !important
+    footer
+        padding: 5vh
+
+

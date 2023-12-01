@@ -1,0 +1,53 @@
+.container-fluid-1
+    width: 80vw
+.nav-child-1
+    width: 50vw
+    font-size: large
+.navbar-nav
+    width: 42vw
+.button-nav
+    height: 6vh
+    width: 11vw
+    border: none
+    border-radius: 7%
+.wissal
+    position: relative
+    display: inline-block
+    color: white
+    background-image: linear-gradient(#363636, #363636)
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    background-size: 0% 100%
+    transition: background-size .5s, color .5s
+
+.wissal:hover 
+    background-size: 100% 100%
+    color: #fff
+.dropdown:hover .dropdown-menu
+    display: block
+    margin-top: 20%
+.nav-hov 
+    a 
+        position: relative
+        &::after 
+            content: ""
+            position: absolute
+            left: 0vw
+            bottom: -30%
+            width: 0
+            background: $blue
+            height: 4px
+            border-radius: 4px
+            transition: ease-in-out 0.3s
+        &:hover::after 
+            width: 100%
+.section3
+    background-image: url(../img/fun-bg.jpg)
+    height: 40vh
+    .section3-blue
+        background-color: #1a76d1
+        height: 40vh
+        opacity: 70%
+.section3-child1
+    i
+        z-index: 11
