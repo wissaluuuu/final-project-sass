@@ -1,5 +1,3 @@
-body
-    // font-family: sans-serif
 .container-fluid-1
     width: 80vw
 .nav-child-1
@@ -12,19 +10,50 @@ body
     width: 11vw
     border: none
     border-radius: 7%
-// .nav-item
-//     .nav-link
-//         position: relative
-//         &::after
-//             content: ""
-//             left: 0vw
-//             bottom: -2%
-//             background-color: #1a76d1
-//             height: 4px
-//             border-radius: 4px
-//             transition: ease-in-out 0.3s
-//         &:hover::after
-//             width: 100%
+.wissal
+    position: relative
+    display: inline-block
+    color: white
+    background-image: linear-gradient(#363636, #363636)
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    background-size: 0% 100%
+    transition: background-size .5s, color .5s
+.wissal:hover 
+    background-size: 100% 100%
+    color: #fff
+.wissal2
+    position: relative
+    display: inline-block
+    color: white
+    background-image: linear-gradient(#1a76d1, #1a76d1)
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    background-size: 0% 100%
+    transition: background-size .5s, color .5s
+.wissal2:hover 
+    background-size: 100% 100%
+    color: #fff
+
+.dropdown:hover .dropdown-menu
+    display: block
+    margin-top: 20%
+.nav-hov 
+    a 
+        position: relative
+        &::after 
+            content: ""
+            position: absolute
+            left: 0vw
+            bottom: -30%
+            width: 0
+            background: $blue
+            height: 4px
+            border-radius: 4px
+            transition: ease-in-out 0.3s
+        &:hover::after 
+            width: 100%
+
 
 .carousel-item
     background-image: url(../img/slider3.jpg)
@@ -75,14 +104,16 @@ body
         padding: 5vw
         .icon
             font-size: xx-large
-    .child3-icon
-        &:hover
-            color: white
-            background-color: #1a76d1
-            opacity: 70%
-        .icon
-            color: white
-            z-index: 1
+            // color: blue
+        .child3-icon    
+            &:hover
+                background-color: #1a76d1
+                opacity: 50%
+                .icon
+                color: white 
+                .icon
+                color: white
+
     .section2-child3
         display: flex
         flex-direction: column
@@ -240,6 +271,7 @@ body
 .sec11_btn
     border: none
     border-radius: 7%
+    height: 6vh !important
 .section12
     input
         border: none
@@ -250,11 +282,11 @@ body
 footer
     input
         border: none
-        height: 7vh
+        height: 5vh
         width: 15vw
     button
-        height: 7vh
-        width: 5vw
+        height: 5vh
+        width: 3vw
 footer
     .socialmedia
         display: flex
@@ -265,12 +297,21 @@ footer
 @media ( max-width: 426px )
     .nav-child-1
         width: 100%
-        height: 100vw
+        height: 60vw
+        padding: 5vh
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+    .blue-button
+        padding: 2vh
+    .button-nav
+        height: 5vh
+        width: 40vw !important
     .section-1
         height: 100vh
         width: 100%
         .carousel-child1
-            width: 90%
+            width: 100%
             display: flex
             flex-direction: column
             justify-content: center
@@ -298,21 +339,33 @@ footer
     .section2-child2
         display: flex
         flex-direction: column
+        margin-top: 20px
     .section2-child3
         padding: 5vh
         height: 30vh
 
     .child3-icon
         width: 15vw
+        height: 20vh !important
+        .icon
+            height: 10vh
+            display: flex
+            align-items: center
     .section3
-        height: 100vh
+        height: 100vh !important
+        background-repeat: no-repeat
+        height:  100vh
+        background-size: cover
+    .section3-child1
+        display: flex
+        flex-direction: column
+        justify-content: space-between
     .section3-blue
         height: 100vh !important
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
-        padding: 20vw
     .sec3-child2
         text-align: center
         display: flex
@@ -350,9 +403,9 @@ footer
         height: 30vh
     .section2-child2
         &::before
-            visibility: hidden
+            display: none
         &::after
-            visibility: hidden
+            display: none
             background-repeat: no-repeat
     .section5
         height: 80vh
@@ -385,7 +438,7 @@ footer
         height: 30vh
     .carousel-item
         background-size: contain
-        background-repeat: no-repeat
+        // background-repeat: no-repeat
         height: 30vh
         p
             font-size: smaller
@@ -393,6 +446,9 @@ footer
         h1
             width: 100% !important
             font-size: small
+        button
+            width: 50%
+            height:4vh !important
     .section5-child1
         width: 100%
         display: flex
@@ -421,8 +477,10 @@ footer
     .sec6-img
         display: flex
         flex-direction: column
+        justify-content: center
+        align-items: center
         gap: 2vh
-        width: 80vw
+        width: 100vw
     .sec7-1
         display: flex
         i
@@ -441,6 +499,9 @@ footer
         padding: 2vh
     .section8-child1
         width: 100vw !important
+        display: flex
+        flex-direction: column
+        align-items: center
         h4
             width: 90vw
             text-align: center
@@ -466,6 +527,8 @@ footer
         button
             width: 100%
             align-items: center
+            border: none
+            padding: 1vh
     .section8
         padding: 10vw !important
         display: flex
@@ -507,6 +570,7 @@ footer
             gap: 2vh
         .input
             height: 10vh
+            border: none
     .text
         width: 100vw
     .img-contact
@@ -524,13 +588,15 @@ footer
             align-items: center
             justify-content: center
         .section12-child1
-            width: 95vw
+            width: 80vw
             display: flex
             flex-direction: column
             align-items: start
             justify-content: center
-            // padding: 2vh
+            padding: 2vh
             width: 100% !important
+            .p1
+                font-size: small
 
         .btn
             display: flex
@@ -542,7 +608,13 @@ footer
         padding: 3vh
         .ftr-p
             font-size: small
-
+    .input1
+        width: 80vw !important
+        input
+            width: 100%
+    .left
+        button
+            width: 80vw
     .footer-child2 
         display: flex
         flex-direction: column
